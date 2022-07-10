@@ -3,13 +3,19 @@
 @import "owl.carousel.css";
 @import "owl.carousel.min.css";
 @import "owl.theme.default.min.css";
+@import "https://fonts.googleapis.com";
+@import "https://fonts.gstatic.com";
+@import "https://fonts.googleapis.com/css2?family=Inter&family=Readex+Pro&display=swap";
 
 @mixin max-screen($res) {
   @media screen and (max-width: $res) {
     @content;
   }
 }
-
+$font_Inter:'Inter';
+$font_Readex_Pro:'Readex Pro';
+$black_color:black;
+$white_color:white;
 * {
   padding: 0;
   margin: 0;
@@ -17,7 +23,7 @@
 }
 
 .dropbtn {
-  color: white;
+  color:$white_color;
   border: none;
   margin-left: 30px;
 }
@@ -42,14 +48,14 @@
   }
 
   .dropbtn {
-    font-family: 'Inter', sans-serif;
+    font-family: $font_Inter, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
     text-transform: uppercase;
-    color: #000000;
-    background-color: #FFFFFF;
+    color: $black_color;
+    background-color: $white_color;
   }
 }
 
@@ -66,17 +72,17 @@
   padding: 12px 16px;
   text-decoration: none;
   display: block;
-  font-family: 'Inter', sans-serif;
+  font-family: $font_Inter, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 17px;
   text-transform: uppercase;
-  color: #000000;
+  color: $black_color;
 }
 
 .dropdown-content a:hover {
-  background-color: #ddd;
+  background-color: $white_color;
 }
 
 .dropdown:hover .dropdown-content {
@@ -89,8 +95,14 @@ img {
 }
 
 header {
-  background-color: #FFFFFF;
+  background-color:$white_color;
   padding: 30px 0;
+ .logo_header{
+   @include max-screen(1294px){
+     padding-left: 15px;
+     padding-right: 15px;
+   }
+ }
 }
 
 .hidden {
@@ -103,7 +115,7 @@ header {
   height: 100%;
   right: 0;
   top: 0;
-  background-color: #FFFFFF;
+  background-color: $white_color;
   transition: all 0.3s;
   text-align: center;
   padding-top: 25%;
@@ -115,13 +127,13 @@ header {
   @include max-screen(767px) {
     a {
       text-decoration: none;
-      font-family: 'Inter', sans-serif;
+      font-family: $font_Inter, sans-serif;
       font-style: normal;
       font-weight: 400;
       font-size: 20px;
       line-height: 20px;
       text-transform: uppercase;
-      color: #000000;
+      color: $black_color;
       display: inline-block;
       text-align: center;
       margin-bottom: 15px;
@@ -217,13 +229,13 @@ margin-left: 10px;
 
         a {
           text-decoration: none;
-          font-family: 'Inter', sans-serif;
+          font-family: $font_Inter, sans-serif;
           font-style: normal;
           font-weight: 400;
           font-size: 14px;
           line-height: 17px;
           text-transform: uppercase;
-          color: #000000;
+          color: $black_color;
           display: inline-block;
           transition: 0.3s;
 
@@ -242,7 +254,10 @@ margin-left: 10px;
     @include max-screen(767px) {
       display: none;
     }
-
+    @include max-screen(1294px){
+      padding-left: 15px;
+      padding-right: 15px;
+    }
     a {
       text-decoration: none;
       display: inline-block;
@@ -275,11 +290,17 @@ margin-left: 10px;
 
 
 .section_main {
-  background-color: #FFFFFF;
+  background-color: $white_color;
   background-size: cover;
   margin: auto;
   padding-top: 28px;
   padding-bottom: 37px;
+  @include max-screen(1294px){
+    padding-left: 15px;
+    padding-right: 15px;
+    background-size: inherit;
+    text-align: center;
+  }
 }
 
 .main_banner {
@@ -289,43 +310,67 @@ margin-left: 10px;
   margin: auto;
   max-width: 1294px;
   display: flex;
+  @include max-screen(1294px){
+    display: inline-block;
+  }
 
   .container_mb {
     max-width: 647px;
+    @include max-screen(1294px){
+      width: 100%;
+      margin: auto;
+      text-align: center;
+    }
 
     h1 {
-      font-family: 'Readex Pro', sans-serif;
+      font-family: $font_Readex_Pro, sans-serif;
       font-style: normal;
       font-weight: 400;
       font-size: 58px;
       line-height: 70px;
-      color: #000000;
+      color: $black_color;
       margin-top: 154px;
       margin-left: 56px;
       max-width: 558px;
+      @include max-screen(1294px){
+        margin-left: inherit;
+        margin-right: inherit;
+      }
+      @include max-screen(768px){
+        font-size:45px;
+        line-height: 45px;
+      }
+      @include max-screen(428px){
+        font-size:30px;
+        line-height: 30px;
+        margin-top: 54px;
+      }
     }
 
     p {
-      font-family: 'Inter', sans-serif;
+      font-family: $font_Inter, sans-serif;
       font-style: normal;
       font-weight: 400;
       font-size: 16px;
       line-height: 19px;
-      color: #000000;
+      color: $black_color;
       margin-top: 19px;
       margin-left: 56px;
       max-width: 565px;
       margin-bottom: 44px;
+      @include max-screen(428px){
+        margin-left: inherit;
+      }
     }
 
     a {
-      font-family: 'Inter', sans-serif;
+      font-family: $font_Inter, sans-serif;
       font-style: normal;
       font-weight: 400;
       font-size: 18px;
       line-height: 22px;
       text-transform: capitalize;
-      color: #000000;
+      color: $black_color;
       border: 1px solid #000000;
       border-radius: 200px;
       text-decoration: none;
@@ -333,6 +378,13 @@ margin-left: 10px;
       margin-left: 56px;
       display: inline-block;
       transition: 0.3s;
+      @include max-screen(1294px){
+        margin-left: inherit;
+        margin-right: inherit;
+      }
+      @include max-screen(428px){
+        margin-left: inherit;
+      }
 
       &:hover {
         transform: scale(1.1);
@@ -345,31 +397,45 @@ margin-left: 10px;
   padding-top: 37px;
   padding-bottom: 39px;
   margin: auto;
+  @include max-screen(1294px){
+    display:block;
+  }
 
   .shop {
     max-width: 780px;
     margin: auto;
-
     h2 {
-      font-family: 'Readex Pro', sans-serif;
+      font-family: $font_Readex_Pro, sans-serif;
       font-style: normal;
       font-weight: 400;
       font-size: 42px;
       line-height: 52px;
       text-align: center;
-      color: #000000;
+      color: $black_color;
       margin-bottom: 9px;
+      @include max-screen(768px){
+        font-size:45px;
+        line-height: 45px;
+      }
+      @include max-screen(1294px){
+       margin-right: 15px;
+        margin-left: 15px;
+      }
     }
 
     p {
-      font-family: 'Readex Pro', sans-serif;
+      font-family:$font_Readex_Pro, sans-serif;
       font-style: normal;
       font-weight: 400;
       font-size: 14px;
       line-height: 17px;
       text-align: center;
-      color: #000000;
+      color: $black_color;
       margin-bottom: 55px;
+      @include max-screen(1294px){
+        margin-right: 15px;
+        margin-left: 15px;
+      }
     }
   }
 }
@@ -378,27 +444,26 @@ margin-left: 10px;
   max-width: 1294px;
   margin: auto;
   display: flex;
+  @include max-screen(1294px){
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  @include max-screen(1133px){
+    flex-wrap: wrap;
+  }
 }
-
-.style_shadow {
-  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1),
-  0 0 0 2px rgb(255, 255, 255),
-  0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
-  border-radius: 32px;
-}
-
 .container_products {
   justify-content: space-between;
   display: block;
   margin: auto;
   flex-wrap: wrap;
-
   .laptops {
     max-width: 639px;
-    background: #FFFFFF;
+    background:$white_color;
     border-radius: 32px;
     margin-bottom: 72px;
-
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
     img {
       max-width: 500px;
       margin-right: 97px;
@@ -406,7 +471,7 @@ margin-left: 10px;
     }
 
     p {
-      font-family: 'Inter', sans-serif;
+      font-family: $font_Inter, sans-serif;
       font-style: normal;
       font-weight: 400;
       font-size: 15px;
@@ -417,7 +482,7 @@ margin-left: 10px;
     }
 
     h3 {
-      font-family: 'Readex Pro', sans-serif;
+      font-family: $font_Readex_Pro, sans-serif;
       font-style: normal;
       font-weight: 400;
       font-size: 32px;
@@ -430,44 +495,65 @@ margin-left: 10px;
 
   .watch {
     max-width: 639px;
-    background: #FFFFFF;
+    background: $white_color;
     border-radius: 32px;
     display: flex;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    @include max-screen(1294px){
+    display: block;
+  }
 
     img {
       max-width: 381px;
       margin-right: 42px;
+      @include max-screen(1294px){
+        margin: auto;
+      }
     }
 
     p {
-      font-family: 'Inter', sans-serif;
+      font-family: $font_Inter, sans-serif;
       font-style: normal;
       font-weight: 400;
       font-size: 15px;
       line-height: 19px;
       text-align: right;
-      color: #000000;
+      color: $black_color;
       margin-top: 87px;
       margin-right: 42px;
+      @include max-screen(1294px){
+       text-align: left;
+        margin-top: 25px;
+      }
     }
 
     h3 {
-      font-family: 'Readex Pro', sans-serif;
+      font-family:$font_Readex_Pro, sans-serif;
       font-style: normal;
       font-weight: 400;
       font-size: 32px;
       line-height: 38px;
       text-align: right;
-      color: #000000;
+      color: $black_color;
       margin-right: 42px;
+      @include max-screen(1294px){
+        text-align: center;
+        margin-bottom: 5px;
+      }
     }
   }
 }
-
+.container_shadow{
+  @include max-screen(1294px){
+    margin-top: 15px;
+  }
+}
 .phones {
   max-width: 312px;
   overflow: hidden;
   border-radius: 32px;
+
 
   img {
     max-width: 405px;
@@ -477,24 +563,24 @@ margin-left: 10px;
   }
 
   p {
-    font-family: 'Inter', sans-serif;
+    font-family: $font_Inter, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
     line-height: 19px;
     text-align: center;
-    color: #000000;
+    color: $black_color;
     margin: auto;
   }
 
   h3 {
-    font-family: 'Readex Pro', sans-serif;
+    font-family: $font_Readex_Pro, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 32px;
     line-height: 38px;
     text-align: center;
-    color: #000000;
+    color: $black_color;
     margin: auto;
     padding-bottom: 144px;
   }
@@ -511,57 +597,65 @@ margin-left: 10px;
   }
 
   p {
-    font-family: 'Inter', sans-serif;
+    font-family: $font_Inter, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
     text-align: center;
-    color: #000000;
+    color: $black_color;
     margin: auto;
   }
 
   h3 {
-    font-family: 'Readex Pro', sans-serif;
+    font-family: $font_Readex_Pro, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 32px;
     line-height: 38px;
     text-align: center;
-    color: #000000;
+    color: $black_color;
     margin: auto;
     padding-bottom: 42px;
   }
 }
 
 .save_on_our {
-  background-color: #FFFFFF;
+  background-color: $white_color;
   margin: auto;
   padding-top: 39px;
   padding-bottom: 37px;
 
   .container_save {
     h3 {
-      font-family: 'Readex Pro', sans-serif;
+      font-family:$font_Readex_Pro, sans-serif;
       font-style: normal;
       font-weight: 400;
       font-size: 42px;
       line-height: 52px;
       text-align: center;
-      color: #000000;
+      color: $black_color;
       margin: auto;
+      @include max-screen(1294px){
+        padding-left: 15px;
+        padding-right: 15px;
+      }
     }
 
     p {
-      font-family: 'Readex Pro', sans-serif;
+      font-family:$font_Readex_Pro, sans-serif;
       font-style: normal;
       font-weight: 400;
       font-size: 13px;
       line-height: 17px;
-      color: #000000;
+      color: $black_color;
       text-align: center;
       margin-top: 9px;
       margin-bottom: 31px;
+      @include max-screen(1294px){
+        padding-left: 15px;
+        padding-right: 15px;
+      }
     }
   }
 
@@ -576,7 +670,7 @@ margin-left: 10px;
       max-width: 302.5px;
 
       h4 {
-        font-family: 'Readex Pro', sans-serif;
+        font-family: $font_Readex_Pro, sans-serif;
         font-style: normal;
         font-weight: 400;
         font-size: 22px;
@@ -586,7 +680,7 @@ margin-left: 10px;
       }
 
       p {
-        font-family: 'Inter', sans-serif;
+        font-family: $font_Inter, sans-serif;
         font-style: normal;
         font-weight: 400;
         font-size: 14px;
@@ -596,19 +690,19 @@ margin-left: 10px;
       }
 
       span {
-        font-family: 'Inter', sans-serif;
+        font-family:$font_Inter, sans-serif;
         font-style: normal;
         font-weight: 400;
         font-size: 18px;
         line-height: 22px;
-        color: #000000;
+        color: $black_color;
       }
     }
   }
 }
 
 .See_the_best {
-  background-color: #FFFFFF;
+  background-color: $white_color;
   margin: auto;
   padding-top: 47px;
   padding-bottom: 28px;
@@ -616,25 +710,33 @@ margin-left: 10px;
   .the_best {
     h3 {
       margin: auto;
-      font-family: 'Readex Pro', sans-serif;
+      font-family: $font_Readex_Pro, sans-serif;
       font-style: normal;
       font-weight: 400;
       font-size: 42px;
       line-height: 52px;
       text-align: center;
-      color: #000000;
+      color: $black_color;
+      @include max-screen(1294px){
+        padding-left: 15px;
+        padding-right: 15px;
+      }
     }
 
     p {
-      font-family: 'Readex Pro', sans-serif;
+      font-family: $font_Readex_Pro, sans-serif;
       font-style: normal;
       font-weight: 400;
       font-size: 13px;
       line-height: 17px;
-      color: #000000;
+      color: $black_color;
       margin-top: 9px;
       margin-bottom: 56px;
       text-align: center;
+      @include max-screen(1294px){
+        padding-left: 15px;
+        padding-right: 15px;
+      }
     }
   }
 
@@ -651,31 +753,31 @@ margin-left: 10px;
       border-radius: 16px;
       padding-top: 41px;
       padding-bottom: 0;
-      transition: 0.3s;
-
-      &:hover {
-        transform: scale(1.1);
+      @include max-screen(1294px){
+       margin: auto;
       }
-
+      @include max-screen(1261px){
+        margin-bottom: 15px;
+      }
       p {
-        font-family: 'Readex Pro', sans-serif;
+        font-family: $font_Readex_Pro, sans-serif;
         font-style: normal;
         font-weight: 400;
         font-size: 13px;
         line-height: 17px;
         text-align: center;
-        color: #000000;
+        color: $black_color;
         margin: auto;
       }
 
       h4 {
-        font-family: 'Readex Pro', sans-serif;
+        font-family: $font_Readex_Pro, sans-serif;
         font-style: normal;
         font-weight: 400;
         font-size: 28px;
         line-height: 35px;
         text-align: center;
-        color: #000000;
+        color: $black_color;
         margin: auto;
       }
 
@@ -686,13 +788,13 @@ margin-left: 10px;
         margin-bottom: 44px;
 
         a {
-          font-family: 'Inter', sans-serif;
+          font-family: $font_Inter, sans-serif;
           font-style: normal;
           font-weight: 400;
           font-size: 18px;
           line-height: 22px;
           text-transform: capitalize;
-          color: #000000;
+          color: $black_color;
           text-decoration: none;
           border: 1px solid #000000;
           border-radius: 200px;
@@ -727,7 +829,7 @@ margin-left: 10px;
 .section_ideas {
   padding-top: 47px;
   padding-bottom: 24px;
-  background-color: #FFFFFF;
+  background-color: $white_color;
 
   .see_all {
     margin-top: 73px;
@@ -735,13 +837,13 @@ margin-left: 10px;
     align-items: center;
 
     a {
-      font-family: 'Inter', sans-serif;
+      font-family: $font_Inter, sans-serif;
       font-style: normal;
       font-weight: 400;
       font-size: 24px;
       line-height: 29px;
       text-transform: capitalize;
-      color: #000000;
+      color: $black_color;
       margin: auto;
       text-decoration: none;
       display: inline-block;
@@ -764,25 +866,33 @@ margin-left: 10px;
 
   .container_ideas {
     h3 {
-      font-family: 'Readex Pro', sans-serif;
+      font-family: $font_Readex_Pro, sans-serif;
       font-style: normal;
       font-weight: 400;
       font-size: 42px;
       line-height: 52px;
       text-align: center;
-      color: #000000;
+      color: $black_color;
       margin-bottom: 9px;
+      @include max-screen(1294px){
+        padding-left: 15px;
+        padding-right: 15px;
+      }
     }
 
     p {
-      font-family: 'Readex Pro', sans-serif;
+      font-family: $font_Readex_Pro, sans-serif;
       font-style: normal;
       font-weight: 400;
       font-size: 13px;
       line-height: 17px;
       text-align: center;
-      color: #000000;
+      color: $black_color;
       margin-bottom: 56px;
+      @include max-screen(1294px){
+        padding-left: 15px;
+        padding-right: 15px;
+      }
     }
   }
 
@@ -801,15 +911,19 @@ margin-left: 10px;
 
     .list {
       max-width: 620px;
+      @include max-screen(1294px){
+        padding-left: 15px;
+        padding-right: 15px;
+      }
 
       ul {
         li {
-          font-family: 'Inter', sans-serif;
+          font-family:$font_Inter, sans-serif;
           font-style: normal;
           font-weight: 400;
           font-size: 24px;
           line-height: 30px;
-          color: #000000;
+          color: $black_color;
           list-style: none;
           margin-bottom: 28px;
         }
@@ -829,16 +943,16 @@ margin-left: 10px;
 .section_else {
   padding-top: 51px;
   padding-bottom: 19px;
-  background-color: #FFFFFF;
+  background-color: $white_color;
 
   h3 {
-    font-family: 'Readex Pro', sans-serif;
+    font-family: $font_Readex_Pro, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 42px;
     line-height: 52px;
     text-align: center;
-    color: #000000;
+    color: $black_color;
     margin-bottom: 24px;
   }
 
@@ -849,13 +963,13 @@ margin-left: 10px;
     padding-bottom: 68px;
 
     a {
-      font-family: 'Inter', sans-serif;
+      font-family: $font_Inter, sans-serif;
       font-style: normal;
       font-weight: 400;
       font-size: 14px;
       line-height: 17px;
-      color: #000000;
-      background: #FFFFFF;
+      color: $black_color;
+      background: $white_color;
       border: 1px solid #C5C5C5;
       border-radius: 200px;
       display: inline-block;
@@ -880,7 +994,6 @@ margin-left: 10px;
     margin: auto;
     padding-bottom: 43px;
     padding-top: 47px;
-
     .form_email {
       max-width: 400px;
       margin: auto;
@@ -895,39 +1008,39 @@ margin-left: 10px;
       }
 
       .btn {
-        background: #000000;
+        background: $black_color;
         border-radius: 0 200px 200px 0;
-        font-family: 'Inter', sans-serif;
+        font-family: $font_Inter, sans-serif;
         font-style: normal;
         font-weight: 400;
         font-size: 14px;
         line-height: 17px;
         text-align: center;
-        color: #FFFFFF;
+        color: $white_color;
         padding: 16px 33px 17px 32px;
         cursor: pointer;
       }
     }
 
     h4 {
-      font-family: 'Readex Pro', sans-serif;
+      font-family: $font_Readex_Pro, sans-serif;
       font-style: normal;
       font-weight: 400;
       font-size: 42px;
       line-height: 52px;
       text-align: center;
-      color: #000000;
+      color: $black_color;
       margin-bottom: 9px;
     }
 
     p {
-      font-family: 'Inter', sans-serif;
+      font-family: $font_Inter, sans-serif;
       font-style: normal;
       font-weight: 400;
       font-size: 16px;
       line-height: 19px;
       text-align: center;
-      color: #000000;
+      color: $black_color;
       margin-bottom: 14px;
     }
 
@@ -958,12 +1071,16 @@ margin-left: 10px;
   border-radius: 100px;
   float: left;
   padding-left: 67px;
-  font-family: 'Inter', sans-serif;
+  font-family: $font_Inter, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 17px;
-  color: #000000;
+  color: $black_color;
+  @include max-screen(768px){
+    width: 550px;
+   text-align: center;
+  }
 }
 
 .container-1 .icon {
@@ -985,6 +1102,7 @@ footer {
     justify-content: space-between;
     margin: auto;
     display: flex;
+    flex-wrap: wrap;
 
     .logo_footer.list_footer {
       max-width: 394px;
@@ -997,12 +1115,12 @@ footer {
 
       p {
         margin-bottom: 102px;
-        font-family: 'Inter', sans-serif;
+        font-family: $font_Inter, sans-serif;
         font-style: normal;
         font-weight: 400;
         font-size: 16px;
         line-height: 19px;
-        color: #000000;
+        color: $black_color;
       }
     }
 
@@ -1011,12 +1129,12 @@ footer {
       margin-bottom: 78px;
 
       h5 {
-        font-family: 'Readex Pro', sans-serif;
+        font-family: $font_Readex_Pro, sans-serif;
         font-style: normal;
         font-weight: 400;
         font-size: 22px;
         line-height: 28px;
-        color: #000000;
+        color: $black_color;
         margin-bottom: 19px;
       }
 
@@ -1031,12 +1149,12 @@ footer {
           }
 
           a {
-            font-family: 'Inter', sans-serif;
+            font-family: $font_Inter, sans-serif;
             font-style: normal;
             font-weight: 400;
             font-size: 17px;
             line-height: 22px;
-            color: #000000;
+            color: $black_color;
             text-decoration: none;
           }
         }
@@ -1054,12 +1172,12 @@ footer {
     border-color: rgba(220, 229, 226, 1);
 
     a {
-      font-family: 'Inter', sans-serif;
+      font-family: $font_Inter, sans-serif;
       font-style: normal;
       font-weight: 400;
       font-size: 18px;
       line-height: 22px;
-      color: #000000;
+      color: $black_color;
       text-decoration: none;
 
       &:after {
@@ -1071,14 +1189,13 @@ footer {
         position: relative;
         top: 4px;
       }
-
       span {
-        font-family: 'Readex Pro', sans-serif;
+        font-family: $font_Readex_Pro, sans-serif;
         font-style: normal;
         font-weight: 400;
         font-size: 18px;
         line-height: 22px;
-        color: #000000;
+        color: $black_color;
       }
     }
   }

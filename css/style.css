@@ -3,6 +3,9 @@
 @import "owl.carousel.css";
 @import "owl.carousel.min.css";
 @import "owl.theme.default.min.css";
+@import "https://fonts.googleapis.com";
+@import "https://fonts.gstatic.com";
+@import "https://fonts.googleapis.com/css2?family=Inter&family=Readex+Pro&display=swap";
 * {
   padding: 0;
   margin: 0;
@@ -39,8 +42,8 @@
   font-size: 14px;
   line-height: 17px;
   text-transform: uppercase;
-  color: #000000;
-  background-color: #FFFFFF;
+  color: black;
+  background-color: white;
 }
 
 .dropdown-content {
@@ -62,11 +65,11 @@
   font-size: 14px;
   line-height: 17px;
   text-transform: uppercase;
-  color: #000000;
+  color: black;
 }
 
 .dropdown-content a:hover {
-  background-color: #ddd;
+  background-color: white;
 }
 
 .dropdown:hover .dropdown-content {
@@ -79,8 +82,14 @@ img {
 }
 
 header {
-  background-color: #FFFFFF;
+  background-color: white;
   padding: 30px 0;
+}
+@media screen and (max-width: 1294px) {
+  header .logo_header {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 .hidden {
@@ -93,7 +102,7 @@ header {
   height: 100%;
   right: 0;
   top: 0;
-  background-color: #FFFFFF;
+  background-color: white;
   transition: all 0.3s;
   text-align: center;
   padding-top: 25%;
@@ -110,7 +119,7 @@ header {
     font-size: 20px;
     line-height: 20px;
     text-transform: uppercase;
-    color: #000000;
+    color: black;
     display: inline-block;
     text-align: center;
     margin-bottom: 15px;
@@ -208,7 +217,7 @@ header {
   font-size: 14px;
   line-height: 17px;
   text-transform: uppercase;
-  color: #000000;
+  color: black;
   display: inline-block;
   transition: 0.3s;
 }
@@ -223,6 +232,12 @@ header {
 @media screen and (max-width: 767px) {
   .conteiner_nav .icon {
     display: none;
+  }
+}
+@media screen and (max-width: 1294px) {
+  .conteiner_nav .icon {
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 .conteiner_nav .icon a {
@@ -251,11 +266,19 @@ header {
 }
 
 .section_main {
-  background-color: #FFFFFF;
+  background-color: white;
   background-size: cover;
   margin: auto;
   padding-top: 28px;
   padding-bottom: 37px;
+}
+@media screen and (max-width: 1294px) {
+  .section_main {
+    padding-left: 15px;
+    padding-right: 15px;
+    background-size: inherit;
+    text-align: center;
+  }
 }
 
 .main_banner {
@@ -266,8 +289,20 @@ header {
   max-width: 1294px;
   display: flex;
 }
+@media screen and (max-width: 1294px) {
+  .main_banner {
+    display: inline-block;
+  }
+}
 .main_banner .container_mb {
   max-width: 647px;
+}
+@media screen and (max-width: 1294px) {
+  .main_banner .container_mb {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
 }
 .main_banner .container_mb h1 {
   font-family: "Readex Pro", sans-serif;
@@ -275,10 +310,29 @@ header {
   font-weight: 400;
   font-size: 58px;
   line-height: 70px;
-  color: #000000;
+  color: black;
   margin-top: 154px;
   margin-left: 56px;
   max-width: 558px;
+}
+@media screen and (max-width: 1294px) {
+  .main_banner .container_mb h1 {
+    margin-left: inherit;
+    margin-right: inherit;
+  }
+}
+@media screen and (max-width: 768px) {
+  .main_banner .container_mb h1 {
+    font-size: 45px;
+    line-height: 45px;
+  }
+}
+@media screen and (max-width: 428px) {
+  .main_banner .container_mb h1 {
+    font-size: 30px;
+    line-height: 30px;
+    margin-top: 54px;
+  }
 }
 .main_banner .container_mb p {
   font-family: "Inter", sans-serif;
@@ -286,11 +340,16 @@ header {
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
-  color: #000000;
+  color: black;
   margin-top: 19px;
   margin-left: 56px;
   max-width: 565px;
   margin-bottom: 44px;
+}
+@media screen and (max-width: 428px) {
+  .main_banner .container_mb p {
+    margin-left: inherit;
+  }
 }
 .main_banner .container_mb a {
   font-family: "Inter", sans-serif;
@@ -299,7 +358,7 @@ header {
   font-size: 18px;
   line-height: 22px;
   text-transform: capitalize;
-  color: #000000;
+  color: black;
   border: 1px solid #000000;
   border-radius: 200px;
   text-decoration: none;
@@ -307,6 +366,17 @@ header {
   margin-left: 56px;
   display: inline-block;
   transition: 0.3s;
+}
+@media screen and (max-width: 1294px) {
+  .main_banner .container_mb a {
+    margin-left: inherit;
+    margin-right: inherit;
+  }
+}
+@media screen and (max-width: 428px) {
+  .main_banner .container_mb a {
+    margin-left: inherit;
+  }
 }
 .main_banner .container_mb a:hover {
   transform: scale(1.1);
@@ -316,6 +386,11 @@ header {
   padding-top: 37px;
   padding-bottom: 39px;
   margin: auto;
+}
+@media screen and (max-width: 1294px) {
+  .shop_our_latest {
+    display: block;
+  }
 }
 .shop_our_latest .shop {
   max-width: 780px;
@@ -328,8 +403,20 @@ header {
   font-size: 42px;
   line-height: 52px;
   text-align: center;
-  color: #000000;
+  color: black;
   margin-bottom: 9px;
+}
+@media screen and (max-width: 768px) {
+  .shop_our_latest .shop h2 {
+    font-size: 45px;
+    line-height: 45px;
+  }
+}
+@media screen and (max-width: 1294px) {
+  .shop_our_latest .shop h2 {
+    margin-right: 15px;
+    margin-left: 15px;
+  }
 }
 .shop_our_latest .shop p {
   font-family: "Readex Pro", sans-serif;
@@ -338,8 +425,14 @@ header {
   font-size: 14px;
   line-height: 17px;
   text-align: center;
-  color: #000000;
+  color: black;
   margin-bottom: 55px;
+}
+@media screen and (max-width: 1294px) {
+  .shop_our_latest .shop p {
+    margin-right: 15px;
+    margin-left: 15px;
+  }
 }
 
 .products {
@@ -347,10 +440,16 @@ header {
   margin: auto;
   display: flex;
 }
-
-.style_shadow {
-  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255), 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
-  border-radius: 32px;
+@media screen and (max-width: 1294px) {
+  .products {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media screen and (max-width: 1133px) {
+  .products {
+    flex-wrap: wrap;
+  }
 }
 
 .container_products {
@@ -361,9 +460,11 @@ header {
 }
 .container_products .laptops {
   max-width: 639px;
-  background: #FFFFFF;
+  background: white;
   border-radius: 32px;
   margin-bottom: 72px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
 }
 .container_products .laptops img {
   max-width: 500px;
@@ -392,13 +493,25 @@ header {
 }
 .container_products .watch {
   max-width: 639px;
-  background: #FFFFFF;
+  background: white;
   border-radius: 32px;
   display: flex;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+@media screen and (max-width: 1294px) {
+  .container_products .watch {
+    display: block;
+  }
 }
 .container_products .watch img {
   max-width: 381px;
   margin-right: 42px;
+}
+@media screen and (max-width: 1294px) {
+  .container_products .watch img {
+    margin: auto;
+  }
 }
 .container_products .watch p {
   font-family: "Inter", sans-serif;
@@ -407,9 +520,15 @@ header {
   font-size: 15px;
   line-height: 19px;
   text-align: right;
-  color: #000000;
+  color: black;
   margin-top: 87px;
   margin-right: 42px;
+}
+@media screen and (max-width: 1294px) {
+  .container_products .watch p {
+    text-align: left;
+    margin-top: 25px;
+  }
 }
 .container_products .watch h3 {
   font-family: "Readex Pro", sans-serif;
@@ -418,8 +537,20 @@ header {
   font-size: 32px;
   line-height: 38px;
   text-align: right;
-  color: #000000;
+  color: black;
   margin-right: 42px;
+}
+@media screen and (max-width: 1294px) {
+  .container_products .watch h3 {
+    text-align: center;
+    margin-bottom: 5px;
+  }
+}
+
+@media screen and (max-width: 1294px) {
+  .container_shadow {
+    margin-top: 15px;
+  }
 }
 
 .phones {
@@ -440,7 +571,7 @@ header {
   font-size: 15px;
   line-height: 19px;
   text-align: center;
-  color: #000000;
+  color: black;
   margin: auto;
 }
 .phones h3 {
@@ -450,7 +581,7 @@ header {
   font-size: 32px;
   line-height: 38px;
   text-align: center;
-  color: #000000;
+  color: black;
   margin: auto;
   padding-bottom: 144px;
 }
@@ -471,7 +602,7 @@ header {
   font-size: 16px;
   line-height: 19px;
   text-align: center;
-  color: #000000;
+  color: black;
   margin: auto;
 }
 .Tablet h3 {
@@ -481,13 +612,13 @@ header {
   font-size: 32px;
   line-height: 38px;
   text-align: center;
-  color: #000000;
+  color: black;
   margin: auto;
   padding-bottom: 42px;
 }
 
 .save_on_our {
-  background-color: #FFFFFF;
+  background-color: white;
   margin: auto;
   padding-top: 39px;
   padding-bottom: 37px;
@@ -499,8 +630,14 @@ header {
   font-size: 42px;
   line-height: 52px;
   text-align: center;
-  color: #000000;
+  color: black;
   margin: auto;
+}
+@media screen and (max-width: 1294px) {
+  .save_on_our .container_save h3 {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 .save_on_our .container_save p {
   font-family: "Readex Pro", sans-serif;
@@ -508,10 +645,16 @@ header {
   font-weight: 400;
   font-size: 13px;
   line-height: 17px;
-  color: #000000;
+  color: black;
   text-align: center;
   margin-top: 9px;
   margin-bottom: 31px;
+}
+@media screen and (max-width: 1294px) {
+  .save_on_our .container_save p {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 .save_on_our .flex_container {
   flex-wrap: wrap;
@@ -547,11 +690,11 @@ header {
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
-  color: #000000;
+  color: black;
 }
 
 .See_the_best {
-  background-color: #FFFFFF;
+  background-color: white;
   margin: auto;
   padding-top: 47px;
   padding-bottom: 28px;
@@ -564,7 +707,13 @@ header {
   font-size: 42px;
   line-height: 52px;
   text-align: center;
-  color: #000000;
+  color: black;
+}
+@media screen and (max-width: 1294px) {
+  .See_the_best .the_best h3 {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 .See_the_best .the_best p {
   font-family: "Readex Pro", sans-serif;
@@ -572,10 +721,16 @@ header {
   font-weight: 400;
   font-size: 13px;
   line-height: 17px;
-  color: #000000;
+  color: black;
   margin-top: 9px;
   margin-bottom: 56px;
   text-align: center;
+}
+@media screen and (max-width: 1294px) {
+  .See_the_best .the_best p {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 .See_the_best .container_flex {
   flex-wrap: wrap;
@@ -590,10 +745,16 @@ header {
   border-radius: 16px;
   padding-top: 41px;
   padding-bottom: 0;
-  transition: 0.3s;
 }
-.See_the_best .container_flex .product_smart:hover {
-  transform: scale(1.1);
+@media screen and (max-width: 1294px) {
+  .See_the_best .container_flex .product_smart {
+    margin: auto;
+  }
+}
+@media screen and (max-width: 1261px) {
+  .See_the_best .container_flex .product_smart {
+    margin-bottom: 15px;
+  }
 }
 .See_the_best .container_flex .product_smart p {
   font-family: "Readex Pro", sans-serif;
@@ -602,7 +763,7 @@ header {
   font-size: 13px;
   line-height: 17px;
   text-align: center;
-  color: #000000;
+  color: black;
   margin: auto;
 }
 .See_the_best .container_flex .product_smart h4 {
@@ -612,7 +773,7 @@ header {
   font-size: 28px;
   line-height: 35px;
   text-align: center;
-  color: #000000;
+  color: black;
   margin: auto;
 }
 .See_the_best .container_flex .product_smart span {
@@ -628,7 +789,7 @@ header {
   font-size: 18px;
   line-height: 22px;
   text-transform: capitalize;
-  color: #000000;
+  color: black;
   text-decoration: none;
   border: 1px solid #000000;
   border-radius: 200px;
@@ -655,7 +816,7 @@ header {
 .section_ideas {
   padding-top: 47px;
   padding-bottom: 24px;
-  background-color: #FFFFFF;
+  background-color: white;
 }
 .section_ideas .see_all {
   margin-top: 73px;
@@ -669,7 +830,7 @@ header {
   font-size: 24px;
   line-height: 29px;
   text-transform: capitalize;
-  color: #000000;
+  color: black;
   margin: auto;
   text-decoration: none;
   display: inline-block;
@@ -693,8 +854,14 @@ header {
   font-size: 42px;
   line-height: 52px;
   text-align: center;
-  color: #000000;
+  color: black;
   margin-bottom: 9px;
+}
+@media screen and (max-width: 1294px) {
+  .section_ideas .container_ideas h3 {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 .section_ideas .container_ideas p {
   font-family: "Readex Pro", sans-serif;
@@ -703,8 +870,14 @@ header {
   font-size: 13px;
   line-height: 17px;
   text-align: center;
-  color: #000000;
+  color: black;
   margin-bottom: 56px;
+}
+@media screen and (max-width: 1294px) {
+  .section_ideas .container_ideas p {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 .section_ideas .container_flex_ideas {
   display: flex;
@@ -721,13 +894,19 @@ header {
 .section_ideas .container_flex_ideas .list {
   max-width: 620px;
 }
+@media screen and (max-width: 1294px) {
+  .section_ideas .container_flex_ideas .list {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
 .section_ideas .container_flex_ideas .list ul li {
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
   line-height: 30px;
-  color: #000000;
+  color: black;
   list-style: none;
   margin-bottom: 28px;
 }
@@ -742,7 +921,7 @@ header {
 .section_else {
   padding-top: 51px;
   padding-bottom: 19px;
-  background-color: #FFFFFF;
+  background-color: white;
 }
 .section_else h3 {
   font-family: "Readex Pro", sans-serif;
@@ -751,7 +930,7 @@ header {
   font-size: 42px;
   line-height: 52px;
   text-align: center;
-  color: #000000;
+  color: black;
   margin-bottom: 24px;
 }
 .section_else .link {
@@ -766,8 +945,8 @@ header {
   font-weight: 400;
   font-size: 14px;
   line-height: 17px;
-  color: #000000;
-  background: #FFFFFF;
+  color: black;
+  background: white;
   border: 1px solid #C5C5C5;
   border-radius: 200px;
   display: inline-block;
@@ -803,7 +982,7 @@ header {
   padding-bottom: 16px;
 }
 .section_else .container_form .form_email .btn {
-  background: #000000;
+  background: black;
   border-radius: 0 200px 200px 0;
   font-family: "Inter", sans-serif;
   font-style: normal;
@@ -811,7 +990,7 @@ header {
   font-size: 14px;
   line-height: 17px;
   text-align: center;
-  color: #FFFFFF;
+  color: white;
   padding: 16px 33px 17px 32px;
   cursor: pointer;
 }
@@ -822,7 +1001,7 @@ header {
   font-size: 42px;
   line-height: 52px;
   text-align: center;
-  color: #000000;
+  color: black;
   margin-bottom: 9px;
 }
 .section_else .container_form p {
@@ -832,7 +1011,7 @@ header {
   font-size: 16px;
   line-height: 19px;
   text-align: center;
-  color: #000000;
+  color: black;
   margin-bottom: 14px;
 }
 .section_else .container_form .img_laptop {
@@ -865,7 +1044,13 @@ header {
   font-weight: 400;
   font-size: 14px;
   line-height: 17px;
-  color: #000000;
+  color: black;
+}
+@media screen and (max-width: 768px) {
+  .container-1 input#search {
+    width: 550px;
+    text-align: center;
+  }
 }
 
 .container-1 .icon {
@@ -887,6 +1072,7 @@ footer .container_footer {
   justify-content: space-between;
   margin: auto;
   display: flex;
+  flex-wrap: wrap;
 }
 footer .container_footer .logo_footer.list_footer {
   max-width: 394px;
@@ -903,7 +1089,7 @@ footer .container_footer .logo_footer.list_footer p {
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
-  color: #000000;
+  color: black;
 }
 footer .container_footer .list_footer {
   max-width: 197px;
@@ -915,7 +1101,7 @@ footer .container_footer .list_footer h5 {
   font-weight: 400;
   font-size: 22px;
   line-height: 28px;
-  color: #000000;
+  color: black;
   margin-bottom: 19px;
 }
 footer .container_footer .list_footer ul li {
@@ -932,7 +1118,7 @@ footer .container_footer .list_footer ul li a {
   font-weight: 400;
   font-size: 17px;
   line-height: 22px;
-  color: #000000;
+  color: black;
   text-decoration: none;
 }
 footer .made_by {
@@ -950,7 +1136,7 @@ footer .made_by a {
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
-  color: #000000;
+  color: black;
   text-decoration: none;
 }
 footer .made_by a:after {
@@ -968,7 +1154,7 @@ footer .made_by a span {
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
-  color: #000000;
+  color: black;
 }
 
 /*# sourceMappingURL=style.css.map */
