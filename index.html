@@ -18,13 +18,13 @@
         <nav>
             <ul>
                 <li><a href="#" target="_blank">all products</a></li>
-                </ul>
+            </ul>
             <div class="dropdown">
                 <button class="dropbtn">Solutions</button>
                 <div class="dropdown-content">
-                    <a href="#">content</a>
-                    <a href="#">content</a>
-                    <a href="#">content</a>
+                    <a href="#" target="_blank">content</a>
+                    <a href="#" target="_blank">content</a>
+                    <a href="#" target="_blank">content</a>
                 </div>
             </div>
             <ul>
@@ -36,8 +36,27 @@
             <a href="#" target="_blank" class="first"></a>
             <a href="#" target="_blank" class="last"></a>
         </div>
+
+        <button class="hamburger open" id="menu-button">
+            <span class="hamburger_top"></span>
+            <span class="hamburger_middle"></span>
+            <span class="hamburger_bottom"></span>
+        </button>
+    </div>
+    <div class="mobile_menu hidden" id="menu">
+        <ul>
+            <li><a href="#" target="_blank">all products</a></li>
+            <li><a href="#" target="_blank">Solutions</a></li>
+            <li><a href="#" target="_blank">ABOUT</a></li>
+            <li><a href="#" target="_blank">Support</a></li>
+        </ul>
+        <div class="mobile_icon">
+            <div><a href="#" target="_blank" class="first"><img src="images/icon_search.svg" alt="search"></a></div>
+            <div><a href="#" target="_blank" class="last"><img src="images/icon_shopping_cart.svg" alt="shopping_cart"></a></div>
+        </div>
     </div>
 </header>
+
 <section class="section_main">
     <div class="main_banner">
         <div class="container_mb">
@@ -96,7 +115,7 @@
         <h3>Save on our most selled items.</h3>
         <p>Our new Limited Edition Winter Design BESPOKE 4-Door Flex™</p>
     </div>
-    <div class="flex_container">
+    <div class="flex_container owl-carousel">
         <div class="product"><a href="#" target="_blank"><img src="images/macbook.jpg" alt="macbook"></a><h4>MacBook Pro
             13</h4>
             <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet</p><span>$ 1,200.00 USD</span></div>
@@ -243,5 +262,9 @@
         <a href="#" target="_blank"><span>Powered by:</span>Webflow</a>
     </div>
 </footer>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="js/owl.carousel.js"></script>
+<script src="js/scripts.js"></script>
 </body>
 </html>

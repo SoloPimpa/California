@@ -1,4 +1,8 @@
 @import "normalize.css";
+@import "owl.theme.default.css";
+@import "owl.carousel.css";
+@import "owl.carousel.min.css";
+@import "owl.theme.default.min.css";
 
 @mixin max-screen($res) {
   @media screen and (max-width: $res) {
@@ -89,6 +93,65 @@ header {
   padding: 30px 0;
 }
 
+.hidden {
+  transform: translateX(100%);
+}
+
+.mobile_menu {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  right: 0;
+  top: 0;
+  background-color: #FFFFFF;
+  transition: all 0.3s;
+  text-align: center;
+  padding-top: 25%;
+
+  li {
+    list-style: none;
+  }
+
+  @include max-screen(767px) {
+    a {
+      text-decoration: none;
+      font-family: 'Inter', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 20px;
+      text-transform: uppercase;
+      color: #000000;
+      display: inline-block;
+      text-align: center;
+      margin-bottom: 15px;
+      transition: 0.3s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.mobile_icon {
+ display: inline-flex;
+  a {
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.3s;
+    margin-right: 10px;
+margin-left: 10px;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
 .conteiner_nav {
   display: flex;
   justify-content: space-between;
@@ -97,8 +160,44 @@ header {
   box-sizing: border-box;
   margin: auto;
 
+  .hamburger {
+    width: 24px;
+    height: 24px;
+    background: none;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 16;
+    display: none;
+    margin-right: 15px;
+    @include max-screen(767px) {
+      display: inline-block;
+    }
+
+    .hamburger_top, .hamburger_middle, .hamburger_bottom {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 24px;
+      height: 2px;
+      background: #4B4B4B;
+    }
+
+    .hamburger_middle {
+      transform: translateY(7px);
+    }
+
+    .hamburger_bottom {
+      transform: translateY(14px);
+    }
+  }
+
   nav {
     display: flex;
+    @include max-screen(767px) {
+      display: none;
+    }
 
     ul {
       display: flex;
@@ -140,12 +239,16 @@ header {
     display: inline-flex;
     justify-content: space-between;
     max-width: 110px;
+    @include max-screen(767px) {
+      display: none;
+    }
 
     a {
       text-decoration: none;
       display: inline-block;
       transition: 0.3s;
-      &:hover{
+
+      &:hover {
         transform: scale(1.1);
       }
 
@@ -471,11 +574,6 @@ header {
 
     .product {
       max-width: 302.5px;
-      transition: 0.3s;
-
-      &:hover {
-        transform: scale(1.1);
-      }
 
       h4 {
         font-family: 'Readex Pro', sans-serif;
@@ -553,6 +651,11 @@ header {
       border-radius: 16px;
       padding-top: 41px;
       padding-bottom: 0;
+      transition: 0.3s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
 
       p {
         font-family: 'Readex Pro', sans-serif;
