@@ -58,7 +58,6 @@ $white_color:white;
     background-color: $white_color;
   }
 }
-
 .dropdown-content {
   display: none;
   position: absolute;
@@ -88,7 +87,11 @@ $white_color:white;
 .dropdown:hover .dropdown-content {
   display: block;
 }
-
+body{
+  @include max-screen(767px){
+    overflow-x: hidden;
+  }
+}
 img {
   width: 100%;
   display: block;
@@ -97,6 +100,9 @@ img {
 header {
   background-color:$white_color;
   padding: 30px 0;
+  position: absolute;
+  z-index: 15;
+  width: 100%;
  .logo_header{
    @include max-screen(1294px){
      padding-left: 15px;
@@ -293,7 +299,7 @@ margin-left: 10px;
   background-color: $white_color;
   background-size: cover;
   margin: auto;
-  padding-top: 28px;
+  padding-top: 108px;
   padding-bottom: 37px;
   @include max-screen(1294px){
     padding-left: 15px;
@@ -625,6 +631,10 @@ margin-left: 10px;
   margin: auto;
   padding-top: 39px;
   padding-bottom: 37px;
+  @include max-screen(1294px){
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 
   .container_save {
     h3 {
@@ -668,6 +678,13 @@ margin-left: 10px;
 
     .product {
       max-width: 302.5px;
+      @include max-screen(1294px){
+       margin-right: 15px;
+      }
+      @include max-screen(665px){
+        margin: auto;
+        padding-top: 15px;
+      }
 
       h4 {
         font-family: $font_Readex_Pro, sans-serif;
@@ -830,6 +847,11 @@ margin-left: 10px;
   padding-top: 47px;
   padding-bottom: 24px;
   background-color: $white_color;
+  @include max-screen(1294px){
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: auto;
+  }
 
   .see_all {
     margin-top: 73px;
@@ -889,10 +911,6 @@ margin-left: 10px;
       text-align: center;
       color: $black_color;
       margin-bottom: 56px;
-      @include max-screen(1294px){
-        padding-left: 15px;
-        padding-right: 15px;
-      }
     }
   }
 
@@ -902,6 +920,10 @@ margin-left: 10px;
     flex-wrap: wrap;
     max-width: 1294px;
     margin: auto;
+    @include max-screen(1294px){
+      display: block;
+      margin: auto;
+    }
 
     .img_ideas {
       max-width: 620px;
@@ -926,6 +948,11 @@ margin-left: 10px;
           color: $black_color;
           list-style: none;
           margin-bottom: 28px;
+          @include max-screen(1294px){
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-top: 15px;
+          }
         }
       }
     }
@@ -1103,6 +1130,10 @@ footer {
     margin: auto;
     display: flex;
     flex-wrap: wrap;
+    @include max-screen(1294px){
+    padding-right: 15px;
+      padding-left: 15px;
+  }
 
     .logo_footer.list_footer {
       max-width: 394px;
@@ -1179,6 +1210,10 @@ footer {
       line-height: 22px;
       color: $black_color;
       text-decoration: none;
+
+      @include max-screen(360px){
+        font-size: 14px;
+      }
 
       &:after {
         content: '';
